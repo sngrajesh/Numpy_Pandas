@@ -1,0 +1,165 @@
+Python NumPy Library
+
+1. NumPy (Numerical Python) is a library for working with arrays and mathematical operations in Python. It is a fundamental package for scientific computing with Python.
+
+import numpy as np
+
+2. NumPy Array
+
+A NumPy array is a multi-dimensional collection of values of the same data type. You can create a NumPy array using the array() function:
+
+arr = np.array([1, 2, 3, 4, 5])
+
+3. NumPy Methods
+
+Here is a list of NumPy methods, grouped by category:
+
+
+
+	a. Array Creation
+
+		np.array(object, dtype=None, copy=True, order='K', subok=False, ndmin=0): Create a NumPy array from an object.
+				data: Input data (list, tuple, etc.)
+				dtype: Desired data type of array (e.g., np.int32, np.float64)
+				copy: If True, the data is copied
+				order: Memory layout order ('C', 'F', 'A', or 'K')
+				subok: If True, subclasses are passed through
+				ndmin: Minimum number of dimensions
+		np.zeros(shape, dtype=float, order='C'): Create an array of zeros with the specified shape and data type.
+				shape: Shape of the array (tuple)
+				dtype: Desired data type
+				order: Memory layout order ('C' or 'F')
+		np.ones(shape, dtype=float, order='C'): Create an array of ones with the specified shape and data type.
+		np.full(shape, fill_value, dtype=None, order='C'): Create an array filled with a specified value.
+		np.empty(shape, dtype=float, order='C'): Create an empty array with the specified shape and data type.
+		numpy.arange([start,] stop[, step,], dtype=None): Returns evenly spaced values within a given interval.
+				start: Start of interval (inclusive, default is 0)
+				stop: End of interval (exclusive)
+				step: Spacing between values (default is 1)
+				dtype: Desired data type
+    	numpy.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None, axis=0): Returns evenly spaced numbers over a specified interval.
+				start: Start of interval
+				stop: End of interval
+				num: Number of samples (default is 50)
+				endpoint: If True, stop is the last sample
+				retstep: If True, return (samples, step)
+				dtype: Desired data type
+				axis: Axis along which the samples are generated
+
+
+
+
+	b. Array Manipulation
+
+		np.reshape(a, newshape, order='C'): Reshape an array to a new shape.
+				a: Array to be reshaped
+				newshape: Desired shape
+				order: Memory layout order ('C', 'F', 'A')
+		np.resize(a, new_shape): Resize an array to a new shape.
+		np.transpose(a, axes=None): Transpose an array.
+				a: Input array
+				axes: By default, reverses the dimensions, otherwise permutes them according to the given axes
+		np.flip(a, axis=None): Flip an array along a specified axis.
+		np.roll(a, shift, axis=None): Roll an array along a specified axis.		
+		np.concatenate((a1, a2, ...), axis=0, out=None): Joins a sequence of arrays along an existing axis.
+				a1, a2, ...: Sequence of arrays
+				axis: Axis along which arrays will be joined (default is 0)
+				out: If provided, the destination to place the result
+		
+
+
+	c. Indexing and Selection
+
+		np.where(condition, x, y): Select values from two arrays based on a condition.
+		np.take(a, indices, axis=None): Select values from an array at specified indices.
+		np.put(a, indices, values, mode='raise'): Set values in an array at specified indices.
+
+
+
+
+	d. Mathematical Operations
+
+		np.add(x1, x2, out=None): Element-wise addition of two arrays.
+		np.subtract(x1, x2, out=None): Element-wise subtraction of two arrays.
+		np.multiply(x1, x2, out=None): Element-wise multiplication of two arrays.
+		np.divide(x1, x2, out=None): Element-wise division of two arrays.
+		np.power(x1, x2, out=None): Element-wise exponentiation of two arrays.
+
+
+
+
+	e. Statistical Functions
+
+		np.mean(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the mean of an array.
+		np.median(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the median of an array.
+		np.std(a, axis=None, dtype=None, out=None, ddof=0, keepdims=False): Calculate the standard deviation of an array.
+		np.var(a, axis=None, dtype=None, out=None, ddof=0, keepdims=False): Calculate the variance of an array.
+					a: Input array
+					axis: Axis along which the means are computed
+					dtype: Desired data type
+					out: Output array
+					keepdims: If True, retains reduced dimensions
+
+
+
+
+	f. Linear Algebra
+
+		np.dot(a, b, out=None): Matrix product of two arrays.
+		np.linalg.inv(a): Inverse of a matrix.
+		np.linalg.det(a): Determinant of a matrix.
+		np.linalg.solve(a, b): Solve a system of linear scalar equations.
+		np.linalg.svd(a, full_matrices=True, compute_uv=True, hermitian=False): Computes the singular value decomposition of a matrix.
+    		a: Input matrix
+				full_matrices: If True, U and Vh are of shape (M, M) and (N, N)
+				compute_uv: If True, compute U and Vh
+				hermitian: If True, assumes a is Hermitian
+
+
+
+	g. Random Number Generation
+
+		np.random.rand(d0, d1, ..., dn): Generate an array of random values.
+		np.random.randn(d0, d1, ..., dn): Generate an array of random values from a normal distribution.
+		np.random.randint(low, high=None, size=None, dtype='l'): Generate an array of random integers.
+
+
+
+
+	h. Other Functions
+
+		np.all(a, axis=None, out=None, keepdims=False): Test whether all elements of an array are true.
+		np.any(a, axis=None, out=None, keepdims=False): Test whether any elements of an array are true.
+		np.sum(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the sum of an array.
+
+
+
+
+	i. File I/O
+
+		np.save(file, arr, allow_pickle=True, fix_imports=True): Saves an array to a binary file in NumPy .npy format.
+				file: Filename or file object
+				arr: Array to be saved
+				allow_pickle: If True, allows saving object arrays using Python pickles
+				fix_imports: If True, tries to fix the pickle import issue
+		np.load(file, mmap_mode=None, allow_pickle=False, fix_imports=True, encoding='ASCII'): Loads arrays or pickled objects from .npy, .npz or pickled files.
+				file: Filename or file object
+				mmap_mode: Memory-map the file (default is None)
+				allow_pickle: If True, allows loading pickled objects
+				fix_imports: If True, fixes the pickle import issue
+				encoding: What encoding to use when reading Python 2 strings
+
+
+
+Parameters
+
+    a, x1, x2, etc.: Input arrays.
+    axis: Axis along which to perform an operation.
+    dtype: Data type of the output array.
+    out: Output array.
+    keepdims: Whether to keep the original dimensions of the input array.
+    order: Order of the output array (e.g., 'C' for C-style, 'F' for Fortran-style).
+    subok: Whether to return a subclass of ndarray instead of ndarray itself.
+
+
+

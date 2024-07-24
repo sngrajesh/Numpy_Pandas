@@ -1,0 +1,251 @@
+Python Pandas Library Note
+The Python Pandas library is a powerful data manipulation and analysis tool. It provides data structures and functions to efficiently handle structured data, including tabular data such as spreadsheets and SQL tables.
+Data Structures
+
+    Series: A one-dimensional labeled array of values.
+    DataFrame: A two-dimensional labeled data structure with columns of potentially different types.
+
+
+Series Methods
+
+    Series(): Create a new Series.
+        Parameters: data, index, dtype
+    
+    append(): Append values to the Series.
+        Parameters: other, ignore_index
+    
+    apply(): Apply a function to the Series.
+        Parameters: func, args, kwargs
+    
+    astype(): Cast the Series to a specified dtype.
+        Parameters: dtype
+    
+    describe(): Generate descriptive statistics.
+        Parameters: percentiles, include, exclude
+    
+    drop(): Drop specified labels from the Series.
+        Parameters: labels, errors
+    
+    drop_duplicates(): Remove duplicate values.
+        Parameters: keep, take_last
+    
+    fillna(): Fill missing values.
+        Parameters: value, method, limit
+    
+    get(): Get item from the Series.
+        Parameters: key
+    
+    head(): Return the first n rows.
+        Parameters: n
+    
+    info(): Print a concise summary.
+    
+    interpolate(): Interpolate missing values.
+        Parameters: method, axis, limit, inplace
+    
+    map(): Map values to a new Series.
+        Parameters: arg
+    
+    max(): Return the maximum value.
+    
+    mean(): Return the mean value.
+    
+    median(): Return the median value.
+    
+    min(): Return the minimum value.
+    
+    mode(): Return the mode value.
+    
+    nlargest(): Return the n largest values.
+        Parameters: n
+    
+    nsmallest(): Return the n smallest values.
+        Parameters: n
+    
+    plot(): Plot the Series.
+        Parameters: kind, ax, figsize, use_index, title, grid, legend
+    
+    quantile(): Return the quantile value.
+        Parameters: q
+    
+    rank(): Rank the values.
+        Parameters: axis, method, na_option, ascending
+    
+    reindex(): Reindex the Series.
+        Parameters: index, method, fill_value, limit
+    
+    rename(): Rename the Series.
+        Parameters: index, axis
+    
+    resample(): Resample the Series.
+        Parameters: rule, axis, closed, label, convention, kind, loffset, limit
+    
+    round(): Round the values.
+        Parameters: decimals
+    
+    sample(): Return a random sample.
+        Parameters: n, frac, replace, weights, random_state
+    
+    shift(): Shift the values.
+        Parameters: periods, freq
+    
+    sort_values(): Sort the values.
+        Parameters: axis, ascending, inplace, kind, na_position
+    
+    std(): Return the standard deviation.
+    
+    sum(): Return the sum.
+    
+    tail(): Return the last n rows.
+        Parameters: n
+    
+    to_csv(): Write the Series to a csv file.
+        Parameters: path, sep, na_rep, header, index, index_label, mode
+    
+    to_dict(): Convert the Series to a dictionary.
+        Parameters: into
+    
+    to_excel(): Write the Series to an excel file.
+        Parameters: excel_writer, sheet_name, na_rep, header, index, index_label
+    
+    to_frame(): Convert the Series to a DataFrame.
+        Parameters: name
+    
+    to_json(): Convert the Series to a json string.
+        Parameters: path, orient, date_format, double_precision, force_ascii, date_unit, default_handler
+    
+    to_list(): Convert the Series to a list.
+    
+    to_numpy(): Convert the Series to a numpy array.
+        Parameters: dtype
+    
+    to_period(): Convert the Series to a period.
+        Parameters: freq
+        to_sql(): Write the Series to a sql database.
+        Parameters: name, con, schema, if_exists, index, index_label, chunksize
+    
+    to_string(): Convert the Series to a string.
+        Parameters: buf, na_rep, formatters, float_format, header, index, index_label
+    
+    unique(): Return the unique values.
+    
+    value_counts(): Return the count of unique values.
+        Parameters: normalize, sort, ascending, bins, dropna
+    
+    var(): Return the variance.
+
+DataFrame Methods
+
+    DataFrame(): Create a new DataFrame.
+        Parameters: data, index, columns, dtype
+    
+    abs(): Return the absolute values.
+    
+    add(): Add values to the DataFrame.
+        Parameters: other, axis, level, fill_value
+    
+    add_prefix(): Add a prefix to the column labels.
+        Parameters: prefix
+    
+    add_suffix(): Add a suffix to the column labels.
+        Parameters: suffix
+    
+    agg(): Aggregate the values.
+        Parameters: func, axis
+    
+    all(): Return True if all values are True.
+        Parameters: axis, bool_only
+    
+    any(): Return True if any value is True.
+        Parameters: axis, bool_only
+    
+    append(): Append rows to the DataFrame.
+        Parameters: other, ignore_index, verify_integrity
+    
+    apply(): Apply a function to the DataFrame.
+        Parameters: func, axis, args, kwargs
+    
+    applymap(): Apply a function to each element.
+        Parameters: func
+    
+    asfreq(): Convert to a specified frequency.
+        Parameters: freq, method, how
+    
+    astype(): Cast the DataFrame to a specified dtype.
+        Parameters: dtype
+    
+    at_time(): Select values at a specified time.
+        Parameters: time
+    
+    between_time(): Select values between two times.
+        Parameters: starttime, endtime
+    
+    bfill(): Fill missing values backwards.
+        Parameters: axis, inplace, limit
+    
+    bool(): Return the truth value.
+    
+    clip(): Clip the values.
+        Parameters: lower, upper
+    
+    columns(): Get the column labels.
+    
+    combine(): Combine the DataFrame with another.
+        Parameters: other, func, axis, level
+    
+    compare(): Compare the DataFrame with another.
+        Parameters: other, axis, keep_shape, keep_equal
+    
+    corr(): Compute pairwise correlation.
+        Parameters: method, min_periods
+    
+    count(): Count the number of non-NA values.
+        Parameters: axis, level
+    
+    cov(): Compute pairwise covariance.
+        Parameters: min_periods
+    
+    cummax(): Return the cumulative maximum.
+        Parameters: axis, skipna
+    
+    cummin(): Return the cumulative minimum.
+        Parameters: axis, skipna
+    
+    cumprod(): Return the cumulative product.
+        Parameters: axis, skipna
+    
+    cumsum(): Return the cumulative sum.
+        Parameters: axis, skipna
+    
+    describe(): Generate descriptive statistics.
+        Parameters: percentiles, include, exclude
+    
+    diff(): Compute the difference.
+        Parameters: periods, axis
+    
+    div(): Divide the DataFrame by another.
+        Parameters: other, axis, level, fill_value
+    
+    drop(): Drop specified labels from the DataFrame.
+        Parameters: labels, axis, errors
+    
+    drop_duplicates(): Remove duplicate rows.
+        Parameters: subset, keep, take_last, inplace
+    
+    dropna(): Remove missing values.
+        Parameters: axis, how, thresh, subset, inplace
+    
+    dtypes(): Get the data types.
+    
+    duplicated(): Return boolean Series denoting duplicate rows.
+        Parameters: subset, keep
+    
+    empty(): Check if the DataFrame is empty.
+    
+    eq(): Compare the DataFrame with another.
+        Parameters: other, axis, level
+    
+
+
+
+    
